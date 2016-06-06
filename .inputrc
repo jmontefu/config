@@ -1,0 +1,30 @@
+# System default
+set meta-flag on
+set input-meta on
+set convert-meta off
+set output-meta on
+
+# Set case sensitive off
+set completion-ignore-case on
+
+# Append slash to copmleted symlinks to directories
+set marked-symlinked-directories on
+
+# Configure comletion for less key presses
+
+set show-all-if-ambiguous on
+set completion-ignore-case on
+set completion-query-items 240
+set page-completions off
+
+# Format output nicer and only show hidden files when requested
+set completion-prefix-display-length 0
+set match-hidden-files on
+
+#ease editing
+set horizontal-scroll-mode off
+set skip-completed-text on
+
+# Bind up and down arrow keys to history search
+"\e[A": history-search-backward
+"\e[B": history-search-forward

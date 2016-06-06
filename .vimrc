@@ -1,0 +1,91 @@
+" General settings
+" ========================
+set nocompatible    " Sets other options, default, but useful on re-sourcing
+set showcmd         " Show the current partial command right of command line
+set ruler           " Show the row,col combination
+set splitbelow      " Make new split below the current one
+set splitright      " Make new vsplits on the right (keep current on left)
+set scrolloff=5     " Keep lines visible at top and bottom of screen
+set background=dark
+set laststatus=2    " Use an extra screen line to keep windows looking good
+set showtabline=2
+set history=500
+set shortmess+=I
+set number          " Shows line numbers
+set backspace=indent,eol,start " sets backspace to work as delete key
+
+" Global clipboard
+set clipboard=unnamedplus
+
+
+" Indentation
+" ========================
+set tabstop=4
+set shiftwidth=4
+set autoindent
+set expandtab
+
+
+
+" Key Mapping
+" ========================
+nmap <Tab> :tabnext<CR>
+
+
+" Set <leader> to ',' (comma).
+let mapleader=','
+nmap ; :
+
+" Comment out a single line / range
+nmap <leader># \c 
+
+
+" Swap and backups (the // means use full path with % in place of /)
+if filewritable('/mnt/scratch/jmontefu/vim/swap/')
+    set directory=/mnt/scratch/jmontefu/vim/swap//
+else
+    set directory=~/.vim/swap//
+endif
+set backupdir=~/.vim/backup
+
+" Persistant undo between sessions (7.3 only)
+if v:version >= 703
+    set undofile
+    set undodir=~/.vim/undo
+endif
+
+
+" Enter/Return in Visual mode sends to Maya, etc.
+vnoremap <CR> :w /tmp/exec.py<CR><ESC>:w<CR>
+
+
+" Plugins
+" ========================
+
+" Pathogen
+execute pathogen#infect()
+
+"NERDtree Toggle 
+map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeWinPos = "right"
+
+"youGetMe
+let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1 }
+
+
+" Undo tree
+map <C-u> :GundoToggle<CR>
+
+" Rust.Vim
+" enabled to help find and fix Rust formating issues
+
+let g:rustc_path = $HOME."/bin/rustc/"
+let g:rustfmt_autosave = 1 
+
+
+" colorscheme
+" ========================
+let &t_Co=256
+set guifont=Monaco:h12
+syntax on 	        " Highlight syntax
+colorscheme evening
