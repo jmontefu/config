@@ -1,0 +1,37 @@
+[user]
+	email = montefusco.john@mgail.com
+	name = " John Montefusco"
+
+
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+    shortlog = auto
+
+[color "branch"]
+    current = yellow bold
+    local = yellow
+    remote = red
+
+[color "diff"]
+    whitespace = green reverse
+
+[push]
+    default = tracking
+
+[merge]
+    tool = "vimdiff3"
+
+[mergetool "vimdif3"]
+    
+    cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\" \"+:0/<<<.*\\|===.*\\|>>>.*\"
+
+[core]
+
+    #Horizontal scrolling that makes sense
+    pager = "less -FRSX -#5"
+
+    #Favorite Editor
+    editor = vim
