@@ -3,7 +3,6 @@
 function main() {
     install .bash_profile ~/.bash_profile
     install .bashrc ~/.bashrc
-    install .bin ~/bin
     install .gitconfig ~/.gitconfig
     install .inputrc ~/.inputrc
     install .screenrc ~/.screenrc
