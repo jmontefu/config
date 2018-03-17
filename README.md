@@ -1,2 +1,0 @@
-# config
-Linux Config Files

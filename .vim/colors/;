@@ -8,12 +8,15 @@ set splitright      " Make new vsplits on the right (keep current on left)
 set scrolloff=5     " Keep lines visible at top and bottom of screen
 set term=screen-256color
 set background=dark
+"set t_Co=256
 set laststatus=2    " Use an extra screen line to keep windows looking good
 set showtabline=2
 set history=500
 set shortmess+=I
 set number          " Shows line numbers
 set backspace=indent,eol,start " sets backspace to work as delete key
+set nowrap
+
 
 " Global clipboard
 set clipboard=unnamedplus
@@ -71,7 +74,7 @@ map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinPos = "right"
 
 "youGetMe
-"let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1 }
+let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1 }
 
 
 " Undo tree
@@ -80,13 +83,14 @@ map <C-u> :GundoToggle<CR>
 " Rust.Vim
 " enabled to help find and fix Rust formating issues
 
-"let g:rustc_path = $HOME."/bin/rustc/"
+let g:rustc_path = $HOME."/bin/rustc/"
 let g:rustfmt_autosave = 1 
-filetype plugin indent on
+
 
 " colorscheme
-" ========================
-let &t_Co=256
+"" ========================
+let t_Co=256
 set guifont=Monaco:h12
 syntax on 	        " Highlight syntax
+filetype plugin indent on
 colorscheme evening

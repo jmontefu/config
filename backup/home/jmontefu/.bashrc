@@ -1,5 +1,4 @@
-
-# ~/.bashrc: exec://github.com/jmontefu/config.gitted by bash(1) for non-login shells.
+# ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -96,7 +95,6 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias t='tmux -2'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -125,19 +123,3 @@ fi
 if [ -x /usr/bin/mint-fortune ]; then
      /usr/bin/mint-fortune
 fi
-# Custom alias
-
-# Default text editor.
-# export EDITOR = vim
-# Never complete when line is empty
-shopt -s no_empty_cmd_completion
-
-
-# Allow Editing of failed history submitions
-shopt -s histreedit
-shopt -s histverify
-
-# Save multi-line history properly
-shopt -s cmdhist
-shopt -s lithist
-
