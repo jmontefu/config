@@ -9,4 +9,4 @@ alias ll "ls -l"
 setenv EDITOR nedit
 
 #vim
-#setenv PATH "/net/homes/jmontefu/opt/vim/bin:$PATH"
+setenv PATH "/mill3d/users/montefuscoj/opt/vim/bin:$PATH"

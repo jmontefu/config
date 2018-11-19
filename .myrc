@@ -1,0 +1,51 @@
+## THE MILL myRC ##
+
+
+
+### Allow upper-case Tab Completion ###
+set complete = enhance
+
+#custom alias
+alias l "ls -la"
+alias t "./tmux_startup_config.sh"
+
+
+#job alias'
+alias j "cd /jobs/ads/"
+alias vrv "cd /jobs/ads/vraylar_gardener_nline_J312411/VOS/"
+alias pp42 "cd /jobs/ads/playstation_the_places_J312444/PJA/sh042/"
+alias pp "cd /jobs/ads/playstation_the_places_J312444/"
+
+# custom maya alais
+alias maya maya-'$MILL_MAYA_VERSION'
+alias m8 "maya-2018"
+alias m6 "maya-2016"
+
+
+
+
+
+
+
+
+
+
+###########################################################
+# Default text editor.
+setenv EDITOR vim
+
+#vim
+setenv PATH "/mill3d/users/montefuscoj/opt/vim81/bin:$PATH"
+#libervent
+setenv PATH "/mill3d/users/montefuscoj/opt/libevent/bin:$PATH"
+setenv LD_LIBRARY_PATH "/mill3d/users/montefuscoj/opt/libevent/lib:$LD_LIBRARY_PATH"
+#ncurse
+setenv PATH "/mill3d/users/montefuscoj/opt/ncurses/bin:$PATH"
+setenv LD_LIBRARY_PATH "/mill3d/users/montefuscoj/opt/ncurses/lib:$LD_LIBRARY_PATH"
+setenv PK_CONFIG_PATH "/mill3d/users/montefuscoj/opt/ncurses/lib/pkgconfig/:/mill3d/users/montefuscoj/opt/libevent/lib/pkconfig/"
+# tmux
+# 
+# set up from binary sent from Joe Brown
+#
+
+
